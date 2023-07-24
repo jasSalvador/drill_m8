@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "431fa4be-0398-4909-8283-adf647964936",
+		"name": "drill_m8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24572160"
+	},
+	"item": [
+		{
+			"name": "bootcamp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/bootcamp",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bootcamp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Juana\",\r\n    \"lastName\": \"La loca\",\r\n    \"email\": \"juana@gmail.com\",\r\n    \"password\": 12345678\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Juana",
+							"disabled": true
+						},
+						{
+							"key": "lastName",
+							"value": "La loca",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "juana@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"facundo.fernandez@correo.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bootcamp",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAyMzUxOTMsImRhdGEiOnsiaWQiOjEsImZpcnN0TmFtZSI6IkZhY3VuZG8iLCJsYXN0TmFtZSI6IkZlcm5hbmRleiIsImVtYWlsIjoiZmFjdW5kby5mZXJuYW5kZXpAY29ycmVvLmNvbSIsInN0YXR1cyI6dHJ1ZX0sImlhdCI6MTY5MDIyNzk5M30.kBaF5xI8mB9QKH6gXDsq1unzwcULXslo9Hek8LIDOXc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Introduciendo el bootcamp de Reac\",\r\n    \"cue\": 10,\r\n    \"description\": \"React es la librería más usada en JavaScript para el desarrollo de interfaces.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/bootcamp",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bootcamp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vincular usuario y bootcamp",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAyMzUxOTMsImRhdGEiOnsiaWQiOjEsImZpcnN0TmFtZSI6IkZhY3VuZG8iLCJsYXN0TmFtZSI6IkZlcm5hbmRleiIsImVtYWlsIjoiZmFjdW5kby5mZXJuYW5kZXpAY29ycmVvLmNvbSIsInN0YXR1cyI6dHJ1ZX0sImlhdCI6MTY5MDIyNzk5M30.kBaF5xI8mB9QKH6gXDsq1unzwcULXslo9Hek8LIDOXc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBootcamp\": 1,\r\n    \"idUser\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/bootcamp/vinculate",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bootcamp",
+						"vinculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consulta bootcamp por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/bootcamp/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bootcamp",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consulta usuario por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Pedro\",\r\n    \"lastName\": \"Sanchez\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/users/5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
